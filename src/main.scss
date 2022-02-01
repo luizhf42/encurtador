@@ -1,13 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
 $white: #fff;
+$black: #000;
+
+@mixin flex($direction: column, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
 
 * {
+  font-size: 16px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 .app {
+  @include flex();
+  font-family: "Lato", sans-serif;
   color: $white;
   height: 100vh;
   background: #132742;
+}
+
+button {
+  cursor: pointer;
 }
