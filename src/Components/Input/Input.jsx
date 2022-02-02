@@ -6,7 +6,9 @@ export default function Input(props) {
     <div className="input-area">
       <FiLink size={23} color="#fff" />
       <input
-        type="url"
+        value={props.inputValue}
+        onChange={props.changeValue}
+        type="text"
         placeholder="ex.: https://github.com/luizhf42"
         readOnly={props.isReadOnly}
       />

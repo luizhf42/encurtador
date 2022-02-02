@@ -1,14 +1,23 @@
 @use "../../main.scss";
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+.app {
+  height: 100vh;
+}
+
 .container {
   width: 100%;
   @include main.flex();
+  margin-top: -100px;
 }
 
 .home-header {
   @include main.flex();
   gap: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 
   h1 {
     text-align: center;

@@ -1,11 +1,11 @@
 .app {
   gap: 10px;
 
-  img {
+  .notfound-img {
     width: min(90%, 300px);
   }
 
-  h1 {
+  > h1 {
     font-size: 1.6rem;
   }
 }

@@ -5,6 +5,8 @@ $black: #000;
 $input-bg: #ffffff26;
 $input-border: #14384d;
 $placeholder: #dfdfdf;
+$original-link: #a7a7a7;
+$short-link: #172742;
 
 @mixin flex($direction: column, $justify: center, $align: center) {
   display: flex;

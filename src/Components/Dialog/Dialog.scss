@@ -1,0 +1,58 @@
+@use "../../main.scss";
+
+.dialog {
+  position: absolute;
+  bottom: 15px;
+  border-radius: 7px;
+  width: min(95%, 700px);
+  background: main.$white;
+  color: main.$black;
+  @include main.flex(column, center, start);
+  gap: 15px;
+  padding: 10px 14px;
+  animation: slide 1.5s;
+
+  header {
+    @include main.flex(row, space-between);
+    width: 100%;
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    button {
+      width: 28px;
+      height: 28px;
+      padding: 0;
+      background: transparent;
+    }
+  }
+
+  p {
+    color: main.$original-link;
+    font-size: 1.05rem;
+  }
+
+  .shortned-link {
+    width: 100%;
+    position: relative;
+    @include main.flex(row);
+
+    .input-area {
+      input {
+        padding: 10px 30px 10px 5px;
+        background: main.$short-link;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    svg {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+    }
+  }
+}
