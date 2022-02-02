@@ -1,0 +1,44 @@
+@use "../../main.scss";
+
+.links-container {
+  padding: 48px 0;
+  min-height: 100vh;
+  width: 100%;
+  @include main.flex(column, start, center);
+
+  .links-header {
+    width: min(95%, 800px);
+    @include main.flex(row, start);
+    margin-bottom: 12px;
+
+    svg {
+      margin: 0 5px 0 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .links-list {
+    width: min(95%, 800px);
+    @include main.flex();
+    list-style: none;
+    gap: 5px;
+
+    li {
+      width: 100%;
+      @include main.flex(row, space-around);
+      position: relative;
+
+      input {
+        padding-right: 37px;
+      }
+
+      > svg {
+        position: absolute;
+        right: 8px;
+      }
+    }
+  }
+}

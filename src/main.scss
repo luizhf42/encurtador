@@ -2,12 +2,25 @@
 
 $white: #fff;
 $black: #000;
+$input-bg: #ffffff26;
+$input-border: #14384d;
+$placeholder: #dfdfdf;
 
 @mixin flex($direction: column, $justify: center, $align: center) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin input($border: 1px solid $input-border, $padding: 12px 5px 12px 37px, $bg: $input-bg, $color: $white) {
+  border: $border;
+  border-radius: 7px;
+  padding: $padding;
+  width: 100%;
+  font-size: 1.1rem;
+  background: $bg;
+  color: $color;
 }
 
 * {
@@ -22,10 +35,23 @@ $black: #000;
   @include flex();
   font-family: "Lato", sans-serif;
   color: $white;
-  height: 100vh;
+  min-height: 100vh;
   background: #132742;
-}
 
-button {
-  cursor: pointer;
+  .input-area {
+    @include flex(row);
+    width: 100%;
+    position: relative;
+
+    svg {
+      position: absolute;
+      left: 8px;
+      height: 100%;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    @include input(0, 12px 0, $white, $black);
+  }
 }

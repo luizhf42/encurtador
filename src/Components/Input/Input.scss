@@ -1,0 +1,13 @@
+@use "../../main.scss";
+
+input {
+  @include main.input();
+
+  &[readonly]:focus {
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: main.$placeholder;
+  }
+}

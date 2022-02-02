@@ -1,14 +1,11 @@
 @use "../../main.scss";
 
-$input-bg: #ffffff26;
-$input-border: #14384d;
-$placeholder: #dfdfdf;
 .container {
   width: 100%;
   @include main.flex();
 }
 
-header {
+.home-header {
   @include main.flex();
   gap: 5px;
   margin-bottom: 30px;
@@ -29,38 +26,6 @@ form {
   @include main.flex();
   gap: 8px;
   animation: slide 1.5s;
-  
-  .input-area {
-    @include main.flex(row);
-    width: 100%;
-    position: relative;
-
-    svg {
-      position: absolute;
-      left: 8px;
-      height: 100%;
-    }
-  }
-  input {
-    border: 1px solid $input-border;
-    border-radius: 7px;
-    padding: 12px 0 12px 37px;
-    width: 100%;
-    font-size: 1.1rem;
-    background: $input-bg;
-    color: main.$white;
-
-    &::placeholder {
-      color: $placeholder;
-    }
-  }
-
-  button {
-    @extend input;
-    padding-left: 0;
-    background: main.$white;
-    color: main.$black;
-  }
 }
 
 @keyframes slide {
