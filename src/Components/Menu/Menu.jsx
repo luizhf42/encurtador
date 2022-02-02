@@ -18,7 +18,7 @@ export default function Menu() {
         </li>
       </ul>
 
-      <Link to="/links" className="meus-links-btn">
+      <Link to="/links" className="nav-btn">
         Meus Links
       </Link>
     </nav>

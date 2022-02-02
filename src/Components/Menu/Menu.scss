@@ -11,13 +11,4 @@ nav {
     @include main.flex(row, space-around);
     width: 40%;
   }
-
-  .meus-links-btn {
-    background: white;
-    text-decoration: none;
-    color: black;
-    border-radius: 4px;
-    text-align: center;
-    padding: 8px 18px;
-  }
 }

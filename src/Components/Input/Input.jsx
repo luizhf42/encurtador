@@ -9,7 +9,6 @@ export default function Input(props) {
         type="url"
         placeholder="ex.: https://github.com/luizhf42"
         readOnly={props.isReadOnly}
-        value={props.value}
       />
     </div>
   );
