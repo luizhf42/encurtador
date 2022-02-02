@@ -54,4 +54,12 @@ $placeholder: #dfdfdf;
     cursor: pointer;
     @include input(0, 12px 0, $white, $black);
   }
+
+  ul {
+    list-style: none;
+
+    a {
+      color: #fff;
+    }
+  }
 }

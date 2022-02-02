@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Input from "../../Components/Input/Input";
+import Menu from "../../Components/Menu/Menu";
 import "./index.scss";
 
 export default function Home() {
   return (
     <div className="app">
+      <Menu />
       <div className="container">
         <header className="home-header">
           <img src="src/assets/logo.png" alt="" />

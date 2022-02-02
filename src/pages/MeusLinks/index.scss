@@ -23,7 +23,6 @@
   .links-list {
     width: min(95%, 800px);
     @include main.flex();
-    list-style: none;
     gap: 5px;
 
     li {
