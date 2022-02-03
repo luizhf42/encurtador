@@ -4,6 +4,7 @@ import Input from "../../Components/Input/Input";
 import Menu from "../../Components/Menu/Menu";
 import api from "../../services/api";
 import "./Home.scss";
+import logo from "../../assets/logo.png"
 
 export default function Home() {
   const [requestWasSuccessful, setRequestWasSuccessful] = useState();
@@ -33,7 +34,7 @@ export default function Home() {
       <Menu />
       <div className="container">
         <header className="home-header">
-          <img src="./src/assets/logo.png" alt="" />
+          <img src={logo} alt="" />
           <h1>Encurta Aí</h1>
           <p>Cole e encurte seu link abaixo</p>
         </header>
