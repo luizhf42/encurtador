@@ -18,7 +18,7 @@ Um encurtador de links feito com React e a API da bit.ly
 
 ### Screenshot
 
-![](./src/assets/images/screenshot.png)
+![](./src/assets/screenshot.png)
 
 ### Links
 
