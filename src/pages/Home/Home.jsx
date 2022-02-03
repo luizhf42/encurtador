@@ -3,27 +3,29 @@ import Dialog from "../../Components/Dialog/Dialog";
 import Input from "../../Components/Input/Input";
 import Menu from "../../Components/Menu/Menu";
 import api from "../../services/api";
-import "./index.scss";
+import "./Home.scss";
 
 export default function Home() {
+  const [requestWasSuccessful, setRequestWasSuccessful] = useState();
   const [url, setUrl] = useState("");
   const [data, setData] = useState({});
   const [showDialog, setShowDialog] = useState(false);
 
   const handleShortLink = async () => {
     try {
-      console.log(url);
       const response = await api.post("/shorten", {
         long_url: url,
       });
 
       setData(response.data);
+      setRequestWasSuccessful(true);
     } catch (error) {
+      setRequestWasSuccessful(false);
       console.error(error);
-      alert("Algo deu errado! Cheque a URL e tente novamente.");
     }
     setUrl("");
     setShowDialog(true);
+    setTimeout(() => setShowDialog(false), 10000);
   };
 
   return (
@@ -43,7 +45,8 @@ export default function Home() {
         >
           <Input
             isReadOnly={false}
-            value={url}
+            inputValue={url}
+            inputPlaceholder="ex.: https://github.com/luizhf42"
             changeValue={(event) => {
               setUrl(event.target.value);
             }}
@@ -53,6 +56,7 @@ export default function Home() {
       </div>
       {showDialog && (
         <Dialog
+          success={requestWasSuccessful}
           closeDialog={() => {
             setShowDialog(false);
           }}

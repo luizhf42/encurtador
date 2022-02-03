@@ -9,7 +9,7 @@ export default function Input(props) {
         value={props.inputValue}
         onChange={props.changeValue}
         type="text"
-        placeholder="ex.: https://github.com/luizhf42"
+        placeholder={props.inputPlaceholder}
         readOnly={props.isReadOnly}
       />
     </div>

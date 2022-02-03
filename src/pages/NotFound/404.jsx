@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./index.scss";
+import "./404.scss";
 
 export default function NotFound() {
   return (

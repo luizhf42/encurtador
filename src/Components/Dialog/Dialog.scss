@@ -10,7 +10,7 @@
   @include main.flex(column, center, start);
   gap: 15px;
   padding: 10px 14px;
-  animation: slide 1.5s;
+  animation: dialogSlide 10s;
 
   header {
     @include main.flex(row, space-between);
@@ -54,5 +54,22 @@
       position: absolute;
       right: 10px;
     }
+  }
+
+  .error {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes dialogSlide {
+  0% {
+    transform: translateY(90px);
+  }
+  10%,
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(160px);
   }
 }
