@@ -33,7 +33,7 @@ export default function Home() {
       <Menu />
       <div className="container">
         <header className="home-header">
-          <img src="../../assets/logo.png" alt="" />
+          <img src="./src/assets/logo.png" alt="" />
           <h1>Encurta Aí</h1>
           <p>Cole e encurte seu link abaixo</p>
         </header>
